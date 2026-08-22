@@ -1,0 +1,41 @@
+{
+  "name": "genpark-ai-ambient-scribe-clinical-documentation-generator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - AI ambient scribe that converts clinical encounter conversations into structured SOAP notes with ICD-10 coding suggestions.",
+  "author": "genpark",
+  "category": "healthtech",
+  "tags": [
+    "ambient-scribe",
+    "clinical-documentation",
+    "soap-note",
+    "icd10",
+    "healthtech-ai"
+  ],
+  "inputs": {
+    "encounter_audio_text": {
+      "type": "string"
+    },
+    "patient_context": {
+      "type": "object"
+    },
+    "specialty": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "soap_note": {
+      "type": "object"
+    },
+    "icd10_codes_suggested": {
+      "type": "array"
+    },
+    "documentation_time_saved_minutes": {
+      "type": "integer"
+    },
+    "accuracy_score": {
+      "type": "number"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
